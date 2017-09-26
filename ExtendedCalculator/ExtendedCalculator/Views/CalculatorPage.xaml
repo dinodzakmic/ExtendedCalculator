@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:widgets="clr-namespace:ExtendedCalculator.Framework.Widgets;assembly=ExtendedCalculator"
+             x:Class="ExtendedCalculator.Views.CalculatorPage">
+  
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 Spacing="5"
+                 Padding="20,20,20,0">
+    
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                     Spacing="10" HeightRequest="300" Padding="10"
+                     BackgroundColor="WhiteSmoke" >
+            <Label x:Name="CalculatorText" 
+                   Text="" TextColor="Black" FontSize="18" 
+                   LineBreakMode="WordWrap"
+                   VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+            <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" Color="CornflowerBlue"/> 
+            <Label Text="= 0" x:Name="Result"
+                   TextColor="Black" FontSize="30"
+                   LineBreakMode="WordWrap"
+                   VerticalTextAlignment="Center" VerticalOptions="End"
+                   HorizontalTextAlignment="End" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="End"    >
+            <widgets:CalculatorOperators x:Name="CalculatorOperators" />
+            <Button x:Name="DisneyRegularButton" Text="" Image="DisneyIcon.png"
+                    Style="{StaticResource OperandsButton}" HorizontalOptions="FillAndExpand"  />
+        </StackLayout>
+   
+        <widgets:CalculatorKeyboard x:Name="CalculatorKeyboard" 
+                                    VerticalOptions="End"
+                                    Margin="0,0,0,5"/>
+    </StackLayout>
+  
+</ContentPage>

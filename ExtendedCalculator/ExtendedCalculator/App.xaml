@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ExtendedCalculator.App" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="http://xamarin.com/schemas/2014/forms"
+             xmlns:viewModels="clr-namespace:ExtendedCalculator.ViewModels;assembly=ExtendedCalculator">
+
+    <forms:Application.Resources>
+        <forms:ResourceDictionary>
+      
+      <viewModels:ViewModelLocator x:Key="Locator" d4P1:Key="Locator" d:IsDataSource="True"
+                                 xmlns:d4P1="http://schemas.microsoft.com/winfx/2006/xaml" />
+        
+      
+            <Style x:Key="OperandsButton" TargetType="Button">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="CornflowerBlue" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="WidthRequest" Value="50" />
+            </Style>
+          
+            <Style x:Key="KeyboardButton" TargetType="Button">
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="WhiteSmoke" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+        
+        </forms:ResourceDictionary>
+    </forms:Application.Resources>
+
+</Application>

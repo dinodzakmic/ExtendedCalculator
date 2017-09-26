@@ -1,0 +1,4 @@
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\CalculatorEngineInterfaces\bin\Debug\CalculatorInterfaces.dll
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\CalculatorEngineInterfaces\bin\Debug\CalculatorInterfaces.pdb
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\CalculatorEngineInterfaces\obj\Debug\CalculatorInterfaces.dll
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\CalculatorEngineInterfaces\obj\Debug\CalculatorInterfaces.pdb

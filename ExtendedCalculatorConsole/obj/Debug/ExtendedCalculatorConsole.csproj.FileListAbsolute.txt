@@ -1,0 +1,10 @@
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\ExtendedCalculatorConsole.exe.config
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\ExtendedCalculatorConsole.exe
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\ExtendedCalculatorConsole.pdb
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\CalculatorEngine.Portable.dll
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\CalculatorInterfaces.dll
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\CalculatorEngine.Portable.pdb
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\bin\Debug\CalculatorInterfaces.pdb
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\obj\Debug\ExtendedCalculatorConsole.csprojResolveAssemblyReference.cache
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\obj\Debug\ExtendedCalculatorConsole.exe
+C:\Users\codeTech\documents\visual studio 2015\Projects\ExtendedCalculator\ExtendedCalculatorConsole\obj\Debug\ExtendedCalculatorConsole.pdb

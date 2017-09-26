@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DD7B036-D3FF-4F54-8999-0FD97CE32D67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtendedCalculator</RootNamespace>
+    <AssemblyName>ExtendedCalculator</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Helpers\Calculator.cs" />
+    <Compile Include="Views\CalculatorPage.xaml.cs">
+      <DependentUpon>CalculatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Widgets\CalculatorKeyboard.xaml.cs">
+      <DependentUpon>CalculatorKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Widgets\CalculatorOperators.xaml.cs">
+      <DependentUpon>CalculatorOperators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\PluginCalculatorEngine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MathParser.org-mXparser.Stand10, Version=4.0.0.2, Culture=neutral, PublicKeyToken=0fbab7add73ed6e2, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MathParser.org-mXparser.4.1.1\lib\netstandard10\MathParser.org-mXparser.Stand10.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CalculatorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Framework\Widgets\CalculatorKeyboard.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Framework\Widgets\CalculatorOperators.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CalculatorEngine.Portable\CalculatorEngine.Portable.csproj">
+      <Project>{de7a5b05-261a-42d0-9ee9-14200d41a5b7}</Project>
+      <Name>CalculatorEngine.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CalculatorEngineInterfaces\CalculatorInterfaces.csproj">
+      <Project>{857914e8-2edd-41ec-bd99-ea7e52510a74}</Project>
+      <Name>CalculatorInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\allclasses-frame.html" />
+    <Content Include="docs\allclasses-noframe.html" />
+    <Content Include="docs\constant-values.html" />
+    <Content Include="docs\deprecated-list.html" />
+    <Content Include="docs\help-doc.html" />
+    <Content Include="docs\index-files\index-1.html" />
+    <Content Include="docs\index-files\index-10.html" />
+    <Content Include="docs\index-files\index-11.html" />
+    <Content Include="docs\index-files\index-12.html" />
+    <Content Include="docs\index-files\index-13.html" />
+    <Content Include="docs\index-files\index-14.html" />
+    <Content Include="docs\index-files\index-15.html" />
+    <Content Include="docs\index-files\index-16.html" />
+    <Content Include="docs\index-files\index-17.html" />
+    <Content Include="docs\index-files\index-18.html" />
+    <Content Include="docs\index-files\index-19.html" />
+    <Content Include="docs\index-files\index-2.html" />
+    <Content Include="docs\index-files\index-20.html" />
+    <Content Include="docs\index-files\index-21.html" />
+    <Content Include="docs\index-files\index-22.html" />
+    <Content Include="docs\index-files\index-23.html" />
+    <Content Include="docs\index-files\index-24.html" />
+    <Content Include="docs\index-files\index-25.html" />
+    <Content Include="docs\index-files\index-26.html" />
+    <Content Include="docs\index-files\index-3.html" />
+    <Content Include="docs\index-files\index-4.html" />
+    <Content Include="docs\index-files\index-5.html" />
+    <Content Include="docs\index-files\index-6.html" />
+    <Content Include="docs\index-files\index-7.html" />
+    <Content Include="docs\index-files\index-8.html" />
+    <Content Include="docs\index-files\index-9.html" />
+    <Content Include="docs\index.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Argument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Argument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Constant.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Expression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Function.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\FunctionExtension.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\mXparser.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\PrimitiveElement.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\RecursiveArgument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Tutorial.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Constant.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Expression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Function.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\FunctionExtension.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\AstronomicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\BinaryRelations.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\BooleanAlgebra.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Calculus.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\AstronomicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\BinaryRelations.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\BooleanAlgebra.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Calculus.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Evaluate.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\MathConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\MathFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\NumberTheory.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\PhysicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\PrimesCache.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\ProbabilityDistributions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\SpecialFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Statistics.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Units.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Evaluate.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\MathConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\MathFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\NumberTheory.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\PhysicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\PrimesCache.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\ProbabilityDistributions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\SpecialFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Statistics.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Units.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mXparser.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\BinaryRelation.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\BitwiseOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\BooleanOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\CalculusOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\BinaryRelation.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\BitwiseOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\BooleanOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\CalculusOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\ConstantValue.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Function1Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Function2Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Function3Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\FunctionVariadic.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\KeyWord.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Operator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\ParserSymbol.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\RandomVariable.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Token.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Unit.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\ConstantValue.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Function1Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Function2Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Function3Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\FunctionVariadic.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\KeyWord.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Operator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\ParserSymbol.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\RandomVariable.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Token.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Unit.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\PrimitiveElement.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\RecursiveArgument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\PerformanceTests.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RegTestExpression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RegTestExpressionAPI.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RegTestSyntax.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RunTest.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\PerformanceTests.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RegTestExpression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RegTestExpressionAPI.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RegTestSyntax.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RunTest.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Tutorial.html" />
+    <Content Include="docs\overview-frame.html" />
+    <Content Include="docs\overview-summary.html" />
+    <Content Include="docs\overview-tree.html" />
+    <Content Include="docs\script.js" />
+    <Content Include="docs\stylesheet.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>
